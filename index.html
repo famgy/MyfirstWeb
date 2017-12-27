@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:display="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="famgy">
+	<title>Welcome to famgy!</title>
+    <base target="_blank"/>
+	<!--<meta http-equiv="Refresh" content="5;url=http://s1.natapp.cc:6400/" />-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		.poem {
+			text-align:center;
+			font-famliy:times;
+			color:green;
+			font-size:20px;
+		}
+		header,footer {
+			background-color:#444;
+			color:white;
+			text-align:center;
+			margin:5px;
+			margin-bottom:5px;
+			padding:8px;
+			border:1px solid grey;
+		}
+		div#post {
+    		border:1px solid grey;
+    		margin:5px;margin-bottom:15px;padding:8px;
+    		background-color:white;
+		}
+		div#content {
+    		border:1px solid grey;
+    		margin:5px;margin-bottom:15px;padding:8px;
+    		background-color:#ddd;
+		}
+	</style>
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mydisappear").click(function (){
+                $("#mydisappear").hide();
+            });
+
+            $("#myimage").click(function () {
+                $("#myimage").hide();
+                $("#myimage2").fadeIn("slow");
+            })
+
+            $("#myimage2").click(function () {
+                $("#myimage2").hide();
+                $("#myimage").fadeIn("slow");
+            })
+
+            $("#myhead").click(function () {
+                $("#mycontent").css("color", "#CCFFFF").slideUp(2000).slideDown(2000);
+            })
+        });
+    </script>
+
+	<script>
+        var c=0;
+		function displayDate()
+		{
+			document.getElementById("demo").innerHTML=Date();
+		}
+		function fillWithColor()
+		{
+			var x=document.getElementById('account');
+			x.style.color='red';
+			x.value=x.value.toUpperCase();
+		}
+		function mOver(obj)
+		{
+			obj.innerHTML="I love you!";
+		}
+		function mOut(obj)
+		{
+			obj.innerHTML="Welcome back home!";
+		}
+		function jumpUrl(url)
+		{
+            //window.location.assign(url)
+		    //window.location.href=url;
+            window.open(url);
+		}
+		function timedMsg()
+        {
+            var t=setTimeout("alert('I love you!')", 3000)
+        }
+	</script>
+</head>
+
+<!--This is a comment-->
+<!-- "#000000" "rgb(0,0,0)" "black"-->
+<body style="background-color:#D0D0D0">
+
+<div class="container">
+	<div style="text-align:center; background-image: url(/image/gaoqing.jpg); color:#99CCCC;font-size:60px" onmouseover="mOver(this)" onmouseout="mOut(this)" class="jumbotron">Welcome back home!</div>
+</div>
+
+<div class="container">
+    <div class="row">
+	    <div class="col-md-4">
+		    <h2>London</h2>
+		    <p>London is the capital city of England.</p>
+		    <p>It is the most populous city in the United Kingdom, with a metropolitian area of over 13 million inhabitants.</p>
+	    </div>
+	    <div class="col-md-4">
+		    <h2>Paris</h2>
+		    <p>Paris is the capital and most populous city of France.</p>
+	    </div>
+	    <div class="col-md-4">
+		    <h2>Tokyo</h2>
+		    <p>Tokyo is the capital city of Japan.</p>
+	    </div>
+    </div>
+</div>
+
+<header>Welcome to famgy!</header>
+
+<div>
+	<dl class="dl-horizontal">
+		<dt>我的博客：</dt>
+		<dd>
+			<input class="btn btn-primary" type="button" value="我的博客" target="_blank"onclick="jumpUrl('/wordpress/')">
+		</dd>
+	</dl>
+</div>
+
+<div>
+	<dl class="dl-horizontal">
+		<dt>网盘工具：</dt>
+		<dd>
+            <input class="btn btn-success" type="button" value="网盘工具" target="_blank"onclick="jumpUrl('/elfinder/elfinder.html')">
+		</dd>
+	</dl>
+</div>
+
+<div>
+	<dl class="dl-horizontal">
+		<dt>下载工具：</dt>
+		<dd>	
+			<a href="/">Connect to deluge-web</a>
+		</dd>
+	</dl>
+</div>
+<hr/>
+
+<div>
+	<dl class="dl-horizontal">
+		<dt>视频播放：</dt>
+		<dd>	
+			<video width="320" height="240" controls="controls" autoplay="autoplay">
+				<source src="/video/movie.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</dd>
+	</dl>
+</div>
+<hr/>
+
+<div>
+	<dl class="dl-horizontal">
+		<dt>音乐播放：</dt>
+		<dd>	
+			<audio controls="controls">
+				<source src="/audio/music.mp3" type="audio/mp3"
+				Your browser does not support the audio tag.>
+			</audio>
+		</dd>
+	</dl>
+</div>
+<hr/>
+
+<div>
+	<dl class="dl-horizontal">
+		<dt>我的相册：</dt>
+		<dd>
+			<img id="myimage" src="/image/900x600.jpg" width="404" height="284" />
+            <img id="myimage2" src="/image/picture.jpg" width="404" height="284" hidden/>
+		</dd>
+	</dl>
+</div>
+<hr/>
+
+<div>
+	<dl class="dl-horizontal">
+		<dt>百度搜索：</dt>
+		<dd>
+			<a href="http://www.baidu.com">Connect to baidu</a>
+		</dd>
+	</dl>
+</div>
+<hr/>
+
+<div id="content" style="background-image: url(/image/gaoqing.jpg)">
+	<h2>News Section</h2>
+
+	<div id="post1">
+		<h2>News Article</h2>
+		<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+		<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+		<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+	</div>
+
+	<script>
+		var para=document.createElement("p");
+		var node=document.createTextNode("news...");
+		para.appendChild(node);
+
+		var element=document.getElementById("post1");
+		element.appendChild(para);
+	</script>
+
+	<div id="post2">
+		<div id="myhead" style="color: red">
+			<h2>点击我，让我动起来</h2>
+		</div>
+		<div id="mycontent">
+			<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+			<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+			<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+		</div>
+	</div>
+
+	<div id="post3">
+		<h2>News Article</h2>
+		<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+		<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+		<p>Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.</p>
+	</div>
+	<br/>
+</div>
+
+<div class="poem">
+<h2>春晓</h2>
+<p>
+   春眠不觉晓<br/>
+   处处闻啼鸟<br/>
+   夜来风雨声<br/>
+   花落知多少<br/>
+</p>
+</div>
+<hr/>
+
+<div>
+	<ul>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ul>
+	<ol>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ol>
+</div>
+
+<!--
+<canvas id="myCanvas" width="1000" height="500" style="border:1px solid #c3c3c3;">
+	Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+	var c=document.getElementById("myCanvas");
+	var cxt=c.getContext("2d");
+	var img=new Image()
+	img.src="/image/picture.jpg"
+	cxt.drawImage(img,0,0);
+</script>
+-->
+
+<div style="text-align:center;color:#99CCCC" class="jumbotron">
+<form action="表单处理程序在action属性中指定.php" method="POST">
+	<input type="radio" name="sex" value="male" checked>男<br/>
+	<input type="radio" name="sex" value="female">女<br/>
+	<br/>
+	<input list="browsers" name="browser">
+	<datalist id="browsers">
+		<option value="Internet Explorer">
+		<option value="Firefox">
+		<option value="Chrome">
+		<option value="Safari">
+		<option value="Opera">
+	</datalist><br/>
+	<br/>
+	<select name="cars">
+		<option value="volvo">沃尔沃</option>
+		<option value="audi">奥迪</option>
+		<option value="bmw">宝马</option>
+		<option value="benz" selected>奔驰</option>
+		<option value="buick">别克</option>
+	</select><br/>
+	<br/>
+	<button type="button" style="background-color:darkmagenta;color:yellow" onclick=timedMsg()>点我下!</button><br/>
+	<br/>
+	<p id="demo">这里显示日期</p>
+	<button type="button" onclick="displayDate()">显示日期</button><br/>
+	<br/>
+    <button type="button" id="mydisappear">点击我消失</button><br/>
+    <br/>
+	<input type="text" id="account" name="account" placeholder="账户" maxlength="10" autocomplete="o" onchange="fillWithColor()"><br/>
+	<input type="password" name="password" placeholder="密码"><br/>
+	<br/>
+	<input type="checkbox" name="vehicle" value="remember">记住密码<br/>
+	<br/>
+	<input type="submit" value="登录">
+</form>
+</div>
+
+<p>
+<pre>
+for (i = 1; i < 100; i++)
+{
+	printf("hello word!");
+}
+</pre>
+</p>
+<hr/>
+
+<table border="1">
+<tr>
+<td>row1, cell 1</td>
+<td>row1, cell 2</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>row2, cell 2</td>
+</tr>
+</table>
+<hr/>
+
+
+<footer>Copyright www.famgy.com</footer>
+
+</body>
+</html>
